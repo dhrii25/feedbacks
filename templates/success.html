@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<body>
+    <div class="container">
+        <h2>Thankyou, {{ name }}</h2>
+        <p>Your feedback has been successfully submitted.</p>
+        <h3> All Feedbacks </h3>
+        <ul>
+            {% for feedback in feedbacks %}
+            <li>{{ i[0] }} - {{i[1]}}
+            <li></li>
+            <strong>Name:</strong> {{ feedback.name }} <br>
+            <strong>USN:</strong> {{ feedback.usn }} <br>
+            <strong>Contact:</strong> {{ feedback.contact }} <br>
+            <strong>Email:</strong> {{ feedback.email }} <br>
+            <strong>Message:</strong> {{ feedback.message }} <br>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/">Submit Another Feedback</a>
+    </div>
+
+</body>
+</head>
